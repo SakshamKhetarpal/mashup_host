@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topsis-Mritunjay-102003030</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
+
+    <style>
+        h1{
+            display:block;
+            font-family: 'Ubuntu', sans-serif;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 46px;
+        }
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: rgb(23, 88, 109);
+            margin:auto;
+        }
+
+        label,
+        button {
+            font-size: 21px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            border: 3px solid rgb(77, 75, 75);
+            padding: .5em 1em;
+            border-radius: 6px;
+        }
+
+        form {
+            display: grid;
+            background-color: #fff;
+            grid-row-gap: 10px;
+            height: auto;
+            justify-content: center;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            margin-left: 1px;
+            margin-right: 1px;
+        }
+
+        button {
+            margin-top: 10px;
+            background: #133EF5;
+            color: #fff;
+            padding: 10px 0;
+            border: 0;
+            border-radius: 6px;
+        }
+
+        div {
+            width: 30em;
+            height: auto;
+            padding: 0.1em;
+            margin: auto;
+            position:relative;
+            border: 3.5px solid black;
+            background-color: white;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Topsis Score Calculator</h1>
+    <div>
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+            <label for="file name">Upload File</label>
+            <input type="file" id="filename" name="filename">
+
+            <label for="weight">Weights</label>
+            <input type="text" id="Weight" name="Weight">
+
+            <label for="imapct">Impacts</label>
+            <input type="text" id="impact" name="impact">
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>
