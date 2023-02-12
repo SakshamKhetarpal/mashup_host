@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topsis-Mritunjay-102003030</title>
+    <title>Mashup-102003039</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,7 +20,7 @@
         }
         body {
             font-family: 'Ubuntu', sans-serif;
-            background-color: rgb(23, 88, 109);
+            background-color: lightblue;
             margin:auto;
         }
 
@@ -73,24 +73,26 @@
 </head>
 
 <body>
-    <h1>Topsis Score Calculator</h1>
+    <h1>Create Your Mashup</h1>
     <div>
-        <form action="/submit" method="POST" enctype="multipart/form-data">
-            <label for="file name">Upload File</label>
-            <input type="file" id="filename" name="filename">
+        <form action="/action_page.php">
+            <label for="singer">Singer Name</label>
+            <input type="text" id="singer" name="singer">
 
-            <label for="weight">Weights</label>
-            <input type="text" id="Weight" name="Weight">
+            <label for="weight">Number of Videos</label>
+            <input type="text" id="novideos" name="novideos" min="10">
 
-            <label for="imapct">Impacts</label>
-            <input type="text" id="impact" name="impact">
+            <label for="imapct">Duration of each video</label>
+            <input type="text" id="duration" name="duration" min="20">
 
             <label for="email">Email Address</label>
             <input type="email" id="email" name="email">
 
-            <button type="submit">Submit</button>
+            <button type="submit">Create</button>
         </form>
     </div>
 </body>
 
 </html>
+<!-- ="/action_page.php" -->
+<!-- ="/submit" method="POST" enctype="multipart/form-data" -->
