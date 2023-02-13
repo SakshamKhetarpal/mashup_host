@@ -1,15 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mashup-102003039</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap" rel="stylesheet">
-
+    <title>Mashup-Saksham-Khetarpal</title>
     <style>
         h1{
             display:block;
@@ -20,15 +15,16 @@
         }
         body {
             font-family: 'Ubuntu', sans-serif;
-            background-color: lightblue;
+            background-color: #E0B0FF;
             margin:auto;
         }
 
         label,
         button {
-            font-size: 21px;
+            font-size: 15px;
             cursor: pointer;
             font-weight: bold;
+            /* width:20px; */
         }
 
         input,
@@ -36,11 +32,13 @@
             border: 3px solid rgb(77, 75, 75);
             padding: .5em 1em;
             border-radius: 6px;
+            width:18em;
         }
 
         form {
             display: grid;
             background-color: #fff;
+            width:auto;
             grid-row-gap: 10px;
             height: auto;
             justify-content: center;
@@ -60,39 +58,55 @@
         }
 
         div {
-            width: 30em;
+            width: 40em;
             height: auto;
             padding: 0.1em;
             margin: auto;
+            /* margin-top:; */
             position:relative;
             border: 3.5px solid black;
             background-color: white;
             justify-content: center;
         }
+        .errorlist{
+            color:red;
+        }
     </style>
 </head>
-
 <body>
-    <h1>Create Your Mashup</h1>
+    <h1>Mashup-Saksham</h1>
     <div>
-        <form action="/action_page.php">
-            <label for="singer">Singer Name</label>
-            <input type="text" id="singer" name="singer">
+    <form action="index.html" method="POST" onsubmit="return false;">
+        <label for="singer">Singer Name</label>
+        <input type="text" id="singer" name="singer" required>
 
-            <label for="weight">Number of Videos</label>
-            <input type="text" id="novideos" name="novideos" min="10">
+        <label for="weight">Number of Videos</label>
+        <input type="number" id="novideos" name="novideos" required min="11" >
 
-            <label for="imapct">Duration of each video</label>
-            <input type="text" id="duration" name="duration" min="20">
+        <label for="imapct">Audio Duration</label>
+        <input type="number" id="duration" name="duration" required min="21">
 
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email">
-
-            <button type="submit">Create</button>
-        </form>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+        <button type="submit" value="submit">Create</button>
+        <script>
+            let form = document.getElementsByTagName("form")[0];
+            form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("!!Your Mashup creation has started and will be mailed shortly!!");
+            });
+            function check(){
+                field = document.getElementById("novideos");
+            if (!field.checkValidity()) {
+                error += "Number must be greater than 10\r\n";
+            }
+            field = document.getElementById("duration");
+            if (!field.checkValidity()) {
+                error += "Number must be greater than 20\r\n";
+            }
+            }
+        </script>
+    </form>
     </div>
 </body>
-
 </html>
-<!-- ="/action_page.php" -->
-<!-- ="/submit" method="POST" enctype="multipart/form-data" -->
